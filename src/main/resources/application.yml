@@ -1,0 +1,62 @@
+# Spring 框架配置
+# 配置 Spring 应用的基本信息和数据源连接
+spring:
+  # 应用配置
+  application:
+    # 应用名称，用于服务注册与发现
+    name: spring-quickstart
+  # 数据源配置
+  datasource:
+    # MySQL 数据库驱动类名
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 数据库连接 URL
+    url: jdbc:mysql://localhost:3306/dmoye_picture
+    # 数据库用户名
+    username: root
+    # 数据库密码
+    password: xxxxx
+
+# MyBatis-Plus 配置
+# 配置 MyBatis-Plus 的映射规则和全局设置
+mybatis-plus:
+  # MyBatis 配置项
+  configuration:
+    #MyBatis 配置
+    # 是否开启下划线到驼峰命名的自动转换
+    map-underscore-to-camel-case: false
+    #仅在开发环境使用
+    # SQL 执行日志实现类，用于控制台输出 SQL 语句
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # MyBatis-Plus 全局配置
+  global-config:
+    # 数据库配置
+    db-config:
+      # 逻辑删除字段名
+      logic-delete-field: isDelete
+      # 逻辑已删除值
+      logic-delete-value: 1
+      # 逻辑未删除值
+      logic-not-delete-value: 0
+
+# Knife4j 接口文档配置
+# 配置 Knife4j Swagger 增强工具的相关参数
+knife4j:
+  # 是否启用 Knife4j
+  enable: true
+  # OpenAPI 规范配置
+  openapi:
+    # API 文档标题
+    title: Knife4j 官方文档
+    # API 版本号
+    version: v1.0
+    # API 分组配置
+    group:
+      test1:
+        # 分组名称
+        group-name: default
+        # API 规则类型
+        api-rule: package
+        # API 资源路径配置
+        api-rule-resources:
+          # 控制器包路径
+          - com.domye.demo.controller
