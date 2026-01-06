@@ -14,16 +14,16 @@ public class BaseResponse<T> implements Serializable {
 
     private int code;
 
-    private T data;
+    private String msg;
 
-    private String message;
+    private T data;
 
     private long timestamp;
 
-    public BaseResponse(int code, T data, String message) {
+    public BaseResponse(int code, T data, String msg) {
         this.code = code;
+        this.msg = msg;
         this.data = data;
-        this.message = message;
         this.timestamp = System.currentTimeMillis();
     }
 
@@ -35,7 +35,7 @@ public class BaseResponse<T> implements Serializable {
         this(errorCode.getCode(), null, errorCode.getMessage());
     }
 
-    public BaseResponse(ErrorCode errorCode, String message) {
-        this(errorCode.getCode(), null, message);
+    public BaseResponse(ErrorCode errorCode, String msg) {
+        this(errorCode.getCode(), null, msg);
     }
 }

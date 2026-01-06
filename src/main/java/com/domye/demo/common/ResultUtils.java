@@ -20,12 +20,12 @@ public class ResultUtils {
     /**
      * 成功响应，带自定义消息
      * @param data 数据
-     * @param message 自定义消息
+     * @param msg 自定义消息
      * @param <T>  数据类型
      * @return 响应
      */
-    public static <T> BaseResponse<T> success(T data, String message) {
-        return new BaseResponse<>(0, data, message);
+    public static <T> BaseResponse<T> success(T data, String msg) {
+        return new BaseResponse<>(0, data, msg);
     }
 
     /**
@@ -40,21 +40,21 @@ public class ResultUtils {
     /**
      * 失败响应，带自定义消息
      * @param errorCode 错误码
-     * @param message 自定义消息
+     * @param msg 自定义消息
      * @return 响应
      */
-    public static BaseResponse<?> error(ErrorCode errorCode, String message) {
-        return new BaseResponse<>(errorCode, message);
+    public static BaseResponse<?> error(ErrorCode errorCode, String msg) {
+        return new BaseResponse<>(errorCode, msg);
     }
 
     /**
      * 失败响应，自定义错误码和消息
      * @param code    错误码
-     * @param message 错误信息
+     * @param msg 错误信息
      * @return 响应
      */
-    public static BaseResponse<?> error(int code, String message) {
-        return new BaseResponse<>(code, null, message);
+    public static BaseResponse<?> error(int code, String msg) {
+        return new BaseResponse<>(code, null, msg);
     }
 
     /**
