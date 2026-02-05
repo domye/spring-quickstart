@@ -5,7 +5,7 @@ import com.domye.demo.exception.ErrorCode;
 /**
  * 结果工具类
  */
-public class ResultUtils {
+public class Result {
 
     /**
      * 成功响应

@@ -1,6 +1,6 @@
 package com.domye.demo.exception;
 
-public class ThrowUtils {
+public class Throw {
 
     /**
      * 条件成立则抛异常

@@ -1,3 +1,8 @@
+# 服务器配置
+server:
+  port: 8123
+  servlet:
+    context-path: /api
 # Spring 框架配置
 # 配置 Spring 应用的基本信息和数据源连接
 spring:
